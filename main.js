@@ -127,19 +127,14 @@ function setStyle() {
     let time = new Date()
     let container = document.querySelector(".Container");
 
-
-    switch(true) {
-        case time.getHours() >= 18 && time.getHours <= 22:
-            container.classList.add("evning")
-        break;
-        case time.getHours() >= 6:
+    if(time.getHours() >= 18 && time.getHours() <= 22) {
+        container.classList.add("evning")
+    }
+    else if(time.getHours() >= 6 time.getHours() <= 18) {
             container.classList.add("day")
-        break;
-        case time.getHours() >= 22 && time.getHours() <= 6:
+    }
+    else if( time.getHours() >= 22 || time.getHours() <= 6) {
             container.classList.add("moon")
-        break;
-        default:
-            console.log(time.getHours())
     }
 }
 
