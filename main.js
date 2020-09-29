@@ -130,7 +130,7 @@ function setStyle() {
     if(time.getHours() >= 18 && time.getHours() <= 22) {
         container.classList.add("evning")
     }
-    else if(time.getHours() >= 6 time.getHours() <= 18) {
+    else if(time.getHours() >= 6 && time.getHours() <= 18) {
             container.classList.add("day")
     }
     else if( time.getHours() >= 22 || time.getHours() <= 6) {
