@@ -127,7 +127,7 @@ function setStyle() {
     let time = new Date()
     let container = document.querySelector(".Container");
 
-    if(time.getHours() >= 18 && time.getHours() <= 22) {
+    if(time.getHours() >= 18 && time.getHours() <= 21) {
         container.classList.add("evning")
     }
     else if(time.getHours() >= 6 && time.getHours() <= 18) {
