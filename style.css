@@ -1,0 +1,192 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway";
+    font-size: 18px;
+}
+.Container{
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
+    width: 375px;
+    height: 567px;
+    text-align: center;
+    border-radius: 12px;
+    color: #ffffff;
+    overflow-y: auto;
+    position: relative;
+
+}
+
+
+
+.Weather_icon{
+    margin-top: 40px;
+    font-size: 80px;
+}
+
+.Weather_temp{
+    font-size: 22px;
+}
+
+.Weather__location{
+    font-size: 18px;
+}
+
+
+
+.weather__week{
+    padding: 0px;
+    margin: 40px 0px 0px 10px;
+    list-style: none;
+    text-align: left;
+}
+
+.weather__day{
+    padding: 5px 0px;
+    position: relative;
+}
+.week__temp {
+    float: right;
+    margin-right: 20px;
+}
+.weather__day  i {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+}
+
+
+
+.overvlow{
+    position: absolute;
+    background-color: #212121;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .6s ease;
+}
+
+.hide{
+    animation: hide 1.7s ease forwards;
+}
+
+#myLocation{
+    width: 140px;
+    height: 140px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: none;
+    background-color: #4CAF50;
+    color: #212121;
+    font-family: "Raleway";
+    font-weight: 700;
+    position: relative;
+    z-index: 100;
+}
+#myLocation::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: borderBtn 1.4s ease-in-out infinite;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* STYLE APP */
+
+.moon{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+.day{
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.evning{
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.rain{
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+
+.fa-moon{
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 0 0;
+    animation: moon 5s ease 5s  infinite  backwards;
+}
+
+
+/* ANIMATION */
+@keyframes moon {
+    100%{
+        background-position: 80px 20px;
+        background-color: red;
+    }
+}
+
+@keyframes hide {
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes borderBtn {
+    40%{
+        border-color: #FFE0B2;
+    }
+    100%{
+        width: 170%;
+        height: 170%;
+        
+    }
+}
+/* ANIMATION */
+
+
+
+/* STYLE APP */
